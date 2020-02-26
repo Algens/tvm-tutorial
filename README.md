@@ -37,3 +37,10 @@ Please see https://docs.tvm.ai/install/from_source.html with this tutorial.
   cmake ..
   make -j4
   ```
+
+##Install TVM Python packages
+Please insert following lines in `~/.bashrc`
+  ```bash
+  export TVM_HOME=/path/to/tvm
+  export PYTHONPATH=$TVM_HOME/python:$TVM_HOME/topi/python:$TVM_HOME/nnvm/python:${PYTHONPATH}
+  ```
