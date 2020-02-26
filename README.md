@@ -9,31 +9,31 @@ Please visit http://releases.llvm.org/download.html and download pre-built binar
 ## How to install TVM on Linux
 Please see https://docs.tvm.ai/install/from_source.html with this tutorial.
 
-1. Clone TVM repository
-  '''bash
+1. Clone TVM repository with `--recursive` option
+  ```bash
   git clone --recursive https://github.com/apache/incubator-tvm tvm
-  '''
+  ```
 
 2. Install minimum building requirements
-  '''bash
+  ```bash
   sudo apt-get update
   sudo apt-get install -y python3 python3-dev python3-setuptools gcc libtinfo-dev zlib1g-dev build-essential cmake libedit-dev libxml2-dev
-  '''
+  ```
 
 3. Make build directory and copy config.cmake
-  '''bash
+  ```bash
   mkdir build
   cp cmake/config.cmake build
-  '''
+  ```
 
 4. Insert following line in config.cmake in build directory
-  '''bash
+  ```bash
   set(USE_LLVM /path/to/your/llvm/bin/llvm-config)
-  '''
+  ```
 
 5. Now build TVM
-  '''bash
+  ```bash
   cd build
   cmake ..
   make -j4
-  '''
+  ```
